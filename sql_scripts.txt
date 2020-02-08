@@ -1,0 +1,25 @@
+CREATE TABLE `zajecia`.`employee data` (
+  `Employee ID` VARCHAR(100) NOT NULL,
+  `Employee first name` VARCHAR(45) NOT NULL,
+  `Employee last name` VARCHAR(45) NOT NULL,
+  `DoB` DATE NOT NULL,
+  `Jobe code` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Employee ID`),
+  UNIQUE INDEX `Employee ID_UNIQUE` (`Employee ID` ASC) VISIBLE,
+  UNIQUE INDEX `Jobe code_UNIQUE` (`Jobe code` ASC) VISIBLE);
+
+REATE TABLE `zajecia`.`org data` (
+  `Job Code` VARCHAR(45) NOT NULL,
+  `LOB` VARCHAR(45) NOT NULL,
+  `Dept` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Job Code`),
+  UNIQUE INDEX `Job Code_UNIQUE` (`Job Code` ASC) VISIBLE);
+
+CREATE TABLE `zajecia`.`payouts` (
+  `Job Code` VARCHAR(45) NOT NULL,
+  `Grade` VARCHAR(45) NOT NULL,
+  `Base salary` INT NOT NULL,
+  `Adjustment` INT NULL,
+  `Bonus` INT NULL,
+  PRIMARY KEY (`Job Code`),
+  UNIQUE INDEX `Job Code_UNIQUE` (`Job Code` ASC) VISIBLE);
